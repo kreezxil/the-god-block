@@ -6,6 +6,7 @@ import com.kreezcraft.thegodblock.init.InitItems;
 
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 
 public class ItemBase extends Item implements IHasModel {
 
@@ -17,6 +18,11 @@ public class ItemBase extends Item implements IHasModel {
 		setRegistryName(name);
 		InitItems.ITEMS.add(this);
 		setCreativeTab(GodBlock.creativeTab);
+	}
+
+	@Override
+	public boolean hasEffect(ItemStack stack) {
+		return true;
 	}
 
 	public void registerItemModel() {

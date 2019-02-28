@@ -36,7 +36,7 @@ public class Nothingness extends BlockGlass implements IHasModel {
 
 	public Nothingness(Material material, String name) {
 		super(material, true);
-		setHardness(3f);
+		setHardness(1f);
 		setLightOpacity(0);
 		setHarvestLevel("pickaxe", 0);
 		this.name = name;
@@ -49,9 +49,20 @@ public class Nothingness extends BlockGlass implements IHasModel {
 
 	@Override
 	public int quantityDropped(Random random) {
-		return 0;
+		return (int)(Math.random() * 3)+1;
 	}
 	
+	@Override
+	public Item getItemDropped(IBlockState state, Random rand, int fortune) {
+		return InitItems.QUANTA;
+	}
+
+	@Override
+	public int quantityDropped(IBlockState state, int fortune, Random random) {
+		// TODO Auto-generated method stub
+		return super.quantityDropped(state, fortune, random);
+	}
+
 	@Override
 	public boolean shouldSideBeRendered(IBlockState state, IBlockAccess world, BlockPos pos, EnumFacing side) {
 		return !(world.getBlockState(pos.offset(side)).getBlock() == this);
@@ -72,18 +83,6 @@ public class Nothingness extends BlockGlass implements IHasModel {
 		return false;
 	}
 		
-//	@Override
-//	public void onBlockDestroyedByExplosion(World worldIn, BlockPos pos, Explosion explosionIn) {
-//		super.onBlockDestroyedByExplosion(worldIn, pos, explosionIn);
-//		worldIn.setBlockToAir(pos);
-//		worldIn.playSound(worldIn.getClosestPlayer(pos.getX(), pos.getY(), pos.getZ(), 2, false), pos, SoundEvents.AMBIENT_CAVE, SoundCategory.PLAYERS, 0.3f, 0.6f);
-//		int random = (int )(Math.random() * 4 + 1);
-//		for (int i = 0; i < random; i++) {
-//			ItemStack stack = new ItemStack(InitItems.QUANTA);
-//			EntityItem spawnQuanta = new EntityItem(worldIn,pos.getX(),pos.getY(),pos.getZ(),stack);
-//		}
-//	}
-
 	@Override
 	public void registerModels() {
 		GodBlock.proxy.registerItemRenderer(Item.getItemFromBlock(this), 0, "inventory");

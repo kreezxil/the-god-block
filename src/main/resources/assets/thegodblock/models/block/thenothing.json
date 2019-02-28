@@ -1,0 +1,8 @@
+{
+    "parent": "block/cube_bottom_top",
+    "textures": {
+			"bottom": "thegodblock:blocks/thenothing",
+			"top": "thegodblock:blocks/thenothing",
+			"side": "thegodblock:blocks/thenothing"
+    }
+}

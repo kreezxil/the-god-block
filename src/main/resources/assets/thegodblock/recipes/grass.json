@@ -1,0 +1,38 @@
+{
+    "result": 
+    {
+        "item": "minecraft:grass"
+    },
+
+    "pattern": 
+    [
+        "sss",
+        "bdb",
+        "qqq"
+    ],
+
+    "type": "forge:ore_shaped",
+    "key": 
+    {
+        "q": 
+        {
+            "item": "thegodblock:quanta"
+        },
+
+        "s": 
+        {
+            "item": "thegodblock:atomic_string"
+        },
+
+        "b": 
+        {
+            "item": "thegodblock:universal_binder"
+        },
+
+        "d": 
+        {
+            "item": "minecraft:dirt",
+            "data": 0
+        }
+    }
+}

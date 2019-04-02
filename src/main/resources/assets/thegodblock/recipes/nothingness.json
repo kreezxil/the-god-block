@@ -1,0 +1,38 @@
+{
+    "result": 
+    {
+        "item": "thegodblock:thenothing",
+        "data": 0
+    },
+
+    "pattern": 
+    [
+        "pip",
+        "gbg",
+        "pip"
+    ],
+
+    "type": "forge:ore_shaped",
+    "key": 
+    {
+        "p": 
+        {
+            "item": "minecraft:ender_pearl"
+        },
+
+        "i": 
+        {
+            "item": "minecraft:iron_block"
+        },
+
+        "g": 
+        {
+            "item": "minecraft:gold_block"
+        },
+
+        "b": 
+        {
+            "item": "thegodblock:universal_binder"
+        }
+    }
+}

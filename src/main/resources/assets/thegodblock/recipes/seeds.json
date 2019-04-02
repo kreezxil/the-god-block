@@ -1,0 +1,27 @@
+{
+    "result": 
+    {
+        "item": "minecraft:wheat_seeds"
+    },
+
+    "pattern": 
+    [
+        "ss",
+        "bb"
+    ],
+
+    "type": "forge:ore_shaped",
+    "key": 
+    {
+        
+        "s":
+        {
+            "item": "thegodblock:atomic_string"
+        },
+
+        "b": 
+        {
+            "item": "thegodblock:universal_binder"
+        }
+    }
+}

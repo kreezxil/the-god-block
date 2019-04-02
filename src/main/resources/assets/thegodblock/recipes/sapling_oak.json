@@ -1,0 +1,38 @@
+{
+    "result": 
+    {
+        "item": "minecraft:sapling",
+        "data": 0
+    },
+
+    "pattern": 
+    [
+        "cs",
+        "db"
+    ],
+
+    "type": "forge:ore_shaped",
+    "key": 
+    {
+        "d": 
+        {
+            "item": "minecraft:dirt",
+            "data": 0
+        },
+
+        "c": 
+        {
+            "item": "minecraft:wheat_seeds"
+        },
+
+        "s": 
+        {
+            "item": "thegodblock:atomic_string"
+        },
+
+        "b": 
+        {
+            "item": "thegodblock:universal_binder"
+        }
+    }
+}

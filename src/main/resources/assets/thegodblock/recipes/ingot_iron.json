@@ -1,0 +1,32 @@
+{
+    "result": 
+    {
+        "item": "minecraft:iron_ingot"
+    },
+
+    "pattern": 
+    [
+        "qss",
+        "ssb",
+        "bbb"
+    ],
+
+    "type": "forge:ore_shaped",
+    "key": 
+    {
+        "q": 
+        {
+            "item": "thegodblock:quanta"
+        },
+        
+        "s":
+        {
+            "item": "thegodblock:atomic_string"
+        },
+
+        "b": 
+        {
+            "item": "thegodblock:universal_binder"
+        }
+    }
+}

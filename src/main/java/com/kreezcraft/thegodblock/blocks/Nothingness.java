@@ -49,11 +49,16 @@ public class Nothingness extends BlockGlass implements IHasModel {
 
 	@Override
 	public int quantityDropped(Random random) {
-		return (int)(Math.random() * 3)+1;
+		return (int) (Math.random() * 3) + 1;
 	}
-	
+
 	@Override
 	public Item getItemDropped(IBlockState state, Random rand, int fortune) {
+		int chance = (int) (Math.random() * 10) + 1;
+		if (chance >= 1 && chance <= 2)
+			return InitItems.UNIVERSAL_BINDER;
+		else if (chance >= 4 && chance <= 6)
+			return InitItems.ATOMIC_STRING;
 		return InitItems.QUANTA;
 	}
 
@@ -67,7 +72,7 @@ public class Nothingness extends BlockGlass implements IHasModel {
 	public boolean shouldSideBeRendered(IBlockState state, IBlockAccess world, BlockPos pos, EnumFacing side) {
 		return !(world.getBlockState(pos.offset(side)).getBlock() == this);
 	}
-	
+
 	@Override
 	public int getLightValue(IBlockState state) {
 		return 7;
@@ -82,7 +87,7 @@ public class Nothingness extends BlockGlass implements IHasModel {
 	public boolean isOpaqueCube(IBlockState state) {
 		return false;
 	}
-		
+
 	@Override
 	public void registerModels() {
 		GodBlock.proxy.registerItemRenderer(Item.getItemFromBlock(this), 0, "inventory");
